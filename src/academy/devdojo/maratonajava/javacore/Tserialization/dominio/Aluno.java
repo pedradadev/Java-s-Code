@@ -1,5 +1,6 @@
 package academy.devdojo.maratonajava.javacore.Tserialization.dominio;
 
+import java.beans.Transient;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -47,7 +48,6 @@ public class Aluno implements Serializable {
             ois.defaultReadObject();
             String nomeTurma = ois.readUTF();
             turma = new Turma(nomeTurma);
-
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
